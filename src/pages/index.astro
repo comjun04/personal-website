@@ -1,11 +1,41 @@
 ---
-import Welcome from '../components/Welcome.astro'
-import Layout from '../layouts/Layout.astro'
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import profileImage from '../assets/profile.png'
+import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout>
-  <Welcome />
+  <div class="flex h-full w-full items-center justify-center gap-8">
+    <Image src={profileImage} alt="profile" class="size-64 rounded-full" />
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-2">
+        <div class="text-3xl">
+          <span class="text-neutral-700">@</span>comjun04
+        </div>
+        <div class="flex gap-2 text-xs text-gray-400">
+          <div class="rounded bg-neutral-800 px-1">aka</div>
+          <div>namemy, 아무닉넴, ...</div>
+        </div>
+      </div>
+
+      <div class="flex flex-row gap-2 text-2xl text-gray-700">
+        <a
+          href="https://github.com/comjun04"
+          class="transition hover:text-gray-400"
+          aria-label="GitHub link"
+        >
+          <Icon name="simple-icons:github" />
+        </a>
+        <a
+          href="mailto:me@namemy.kr"
+          class="transition hover:text-gray-400"
+          aria-label="Email link"
+        >
+          <Icon name="lucide:mail" />
+        </a>
+      </div>
+    </div>
+  </div>
 </Layout>

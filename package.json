@@ -13,7 +13,10 @@
     "format": "oxfmt --write src"
   },
   "dependencies": {
-    "astro": "^7.4.4"
+    "@iconify-json/lucide": "^1.2.149",
+    "@iconify-json/simple-icons": "^1.2.101",
+    "astro": "^7.4.4",
+    "astro-icon": "^1.2.0"
   },
   "devDependencies": {
     "@astrojs/compiler-rs": "^0.5.2",
